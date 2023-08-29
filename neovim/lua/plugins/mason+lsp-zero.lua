@@ -5,39 +5,13 @@ return {
     lazy = true,
     config = false,
   },
-  {
+     {
     'williamboman/mason.nvim',
     cmd = {'Mason', 'MasonInstall', 'MasonUpdate'},
     lazy = true,
     config = true,
   },
-
-  -- Autocompletion
-  {
-    'hrsh7th/nvim-cmp',
-    event = 'InsertEnter',
-    dependencies = {
-      {'L3MON4D3/LuaSnip'},
-    },
-    config = function()
-      -- Here is where you configure the autocompletion settings.
-      require('lsp-zero').extend_cmp()
-
-      -- And you can configure cmp even more, if you want to.
-      local cmp = require('cmp')
-      local cmp_action = require('lsp-zero').cmp_action() 
-
-      cmp.setup({
-        mapping = {
-          ['<C-Space>'] = cmp.mapping.complete(),
-          ['<C-f>'] = cmp_action.luasnip_jump_forward(),
-          ['<C-b>'] = cmp_action.luasnip_jump_backward(),
-        }
-      })
-    end
-  },
-
-  -- LSP
+-- LSP
   {
     'williamboman/mason-lspconfig.nvim',
     cmd = {'LspInfo', 'LspInstall', 'LspStart'},
