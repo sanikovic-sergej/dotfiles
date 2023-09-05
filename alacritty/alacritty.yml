@@ -269,7 +269,4 @@ hide_cursor_when_typing: false
 # Entries in shell.args are passed unmodified as arguments to the shell.
 #
 shell:
-  program: /usr/bin/zsh
-  args:
-    - --login
-
+  program: /usr/bin/tmux
