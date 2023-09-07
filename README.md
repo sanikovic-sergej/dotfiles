@@ -15,3 +15,7 @@ starting from scratch and remembering all my steps.
     - Based Themes of Alacritty and Nvim to Tokiyo-Storm
 - [ ] Somehow create a Pipewire audio filter chain, that makes mics useable
 - [ ] Switching to git-submodules for plugins?
+- [ ] keep track of additional packages
+    - ripgrep [fzf in neovim]
+    - python3-venv [mason in neovim]
+    - tmux, nvim, zsh, pipewire [DUH!]
