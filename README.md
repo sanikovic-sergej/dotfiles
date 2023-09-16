@@ -14,9 +14,12 @@ starting from scratch and remembering all my steps.
 - [x] Alacritty + tmux
     - Based Themes of Alacritty and Nvim to Tokiyo-Storm
 - [ ] Somehow create a Pipewire audio filter chain, that makes mics useable
+    - could make a good template with calf-plugins but pipewire has no lv2 support
+        - build it with lv2 support?
 - [ ] Switching to git-submodules for plugins?
 - [ ] keep track of additional packages
     - ripgrep [fzf in neovim]
     - python3-venv [mason in neovim]
     - tmux, nvim, zsh, pipewire [DUH!]
     - Nerd Hack Font (fonts-hack-ttf) [ glyphs ]
+    - calf-plugins [audio processin lv2]
