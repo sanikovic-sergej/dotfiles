@@ -19,3 +19,4 @@ starting from scratch and remembering all my steps.
     - ripgrep [fzf in neovim]
     - python3-venv [mason in neovim]
     - tmux, nvim, zsh, pipewire [DUH!]
+    - Nerd Hack Font (fonts-hack-ttf) [ glyphs ]
