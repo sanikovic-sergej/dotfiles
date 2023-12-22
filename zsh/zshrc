@@ -256,6 +256,8 @@ alias config-zsh="nvim ~/.zshrc"
 alias config-tmux="nvim ~/.config/tmux/tmux.conf"
 alias config-alacritty="nvim ~/.config/alacritty/alacritty.yml"
 
+alias dotfiles="cd ~/.dotfiles"
+
 alias vim="nvim"
 
 alias cat="batcat"
