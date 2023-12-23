@@ -8,18 +8,36 @@ starting from scratch and remembering all my steps.
     - The Theme will be based on https://github.com/caiogondim/bullet-train.zsh
         - [ ] Adjust Time to be at the end of the first line (right corner)
         - [ ] Adjust Git check symbol and red dot. They look outdated. Maybe a Font Problem
-    - [x] Same Thing for Tmux https://github.com/caiogondim/maglev
+        - [ ] Show Ram useage like 5G/16G. Maybe even color code on percentage?
+        - [ ] Remove the version display of node directly command line
+        - [ ] Display git information in a new line instead of growing command line. Looks ridicious with giant branch names
+    - [x] Same Thing for 
         - [ ] Fix "? 0%" on no battery devices
-- [ ] .bashrc to have as backup
-- [x] Alacritty + tmux
-    - Based Themes of Alacritty and Nvim to Tokiyo-Storm
-- [ ] Somehow create a Pipewire audio filter chain, that makes mics useable
+- [x] Somehow create a Pipewire audio filter chain, that makes mics useable
     - could make a good template with calf-plugins but pipewire has no lv2 support
         - build it with lv2 support?
-- [ ] Switching to git-submodules for plugins?
-- [ ] keep track of additional packages
-    - ripgrep [fzf in neovim]
-    - python3-venv [mason in neovim]
-    - tmux, nvim, zsh, pipewire [DUH!]
+        - got a tip to use an audiointerface device. How about wireless connections like Bluetooth?
+- Next Neovim Plugins
+    - [ ] Which-key
+    - [ ] Lazy-Git
+    - [ ] Harpoon
+    - [ ] Neo-Tree
+- [ ] Switching to git-submodules for plugins
+    - Submodules in tmux
+    - Submodules oh-my-zsh
+- [ ] keep track of additional packages. May be usefull for an installer script
+    - neovim: Telescop
+        - ripgrep [fzf in neovim]
+        - fd/fd-find needs ln -s $(which fdfind) /usr/bin/fd
+    - python3-venv [mason in neovim]. Are you sure? Alot of optional in checkhealth
+    - tmux, nvim, zsh, pipewire, alacritty [DUH!]
+        - Theme
+            - Tmux https://github.com/caiogondim/maglev
+            - Zsh https://github.com/caiogondim/bullet-train.zsh
+            - Alacritty + Neovim Tokiyo-Storm
     - Nerd Hack Font (fonts-hack-ttf) [ glyphs ]
+        - No longer defined in Alacritty. Current setup is fonts.conf
     - calf-plugins [audio processin lv2]
+        - needs pipewire with lv2 support before it can be used
+    - bat [cat with syntaxhighlighting, alias added]
+    - nala [apt frontend, alias added]

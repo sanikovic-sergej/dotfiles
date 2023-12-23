@@ -1,0 +1,6 @@
+# Noevim exlisions
+/neovim/lazy-lock.json
+
+# Tmux Plugins till submodules
+
+/tmux/plugins/*
