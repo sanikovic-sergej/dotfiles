@@ -6,13 +6,13 @@ starting from scratch and remembering all my steps.
 # Goals
 - [ ] switch to zsh as a main from bash
     - The Theme will be based on https://github.com/caiogondim/bullet-train.zsh
-        - [ ] Adjust Time to be at the end of the first line (right corner)
-        - [ ] Adjust Git check symbol and red dot. They look outdated. Maybe a Font Problem
+        - [X] Adjust Time to be at the end of the first line (right corner)
         - [ ] Show Ram useage like 5G/16G. Maybe even color code on percentage?
-        - [ ] Remove the version display of node directly command line
+        - [x] Remove the version display of node directly command line
         - [ ] Display git information in a new line instead of growing command line. Looks ridicious with giant branch names
+        - [ ] Adjust Git check symbol and red dot. They look outdated. Maybe a Font Problem
     - [x] Same Thing for 
-        - [ ] Fix "? 0%" on no battery devices
+        - [X] Fix "? 0%" on no battery devices
 - [x] Somehow create a Pipewire audio filter chain, that makes mics useable
     - could make a good template with calf-plugins but pipewire has no lv2 support
         - build it with lv2 support?
