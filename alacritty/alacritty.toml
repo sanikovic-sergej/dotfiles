@@ -107,7 +107,7 @@ key = "Return"
 mods = "Control|Shift"
 
 [shell]
-program = "/usr/bin/zsh"
+program = "/usr/bin/tmux"
 
 [window.padding]
 x = 0

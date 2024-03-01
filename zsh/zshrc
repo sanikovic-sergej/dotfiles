@@ -254,7 +254,7 @@ alias src-tmux="tmux source-file ~/.config/tmux/tmux.conf"
 alias config-nvim="nvim ~/.config/nvim/"
 alias config-zsh="nvim ~/.zshrc"
 alias config-tmux="nvim ~/.config/tmux/tmux.conf"
-alias config-alacritty="nvim ~/.config/alacritty/alacritty.yml"
+alias config-alacritty="nvim ~/.config/alacritty/alacritty.toml"
 
 alias dotfiles="cd ~/.dotfiles"
 
