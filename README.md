@@ -18,6 +18,7 @@ starting from scratch and remembering all my steps.
     - could make a good template with calf-plugins but pipewire has no lv2 support
         - build it with lv2 support?
         - got a tip to use an audiointerface device. How about wireless connections like Bluetooth?
+- [ ] Change Cursor depending on VI Mode. A "Beam" on insert and "Block" in normal mode
 - Next Neovim Plugins
     - [ ] Which-key
     - [ ] Lazy-Git
