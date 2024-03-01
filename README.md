@@ -1,6 +1,6 @@
 # Personal .dotfiles
 A public repo with .dotfiles for easier transfer of configurations.
-With this repository i shall save my setup and improve on it instead of
+With this repository I shall save my setup and improve on it instead of
 starting from scratch and remembering all my steps.
 
 # Goals
@@ -8,6 +8,7 @@ starting from scratch and remembering all my steps.
     - The Theme will be based on https://github.com/caiogondim/bullet-train.zsh
         - [X] Adjust Time to be at the end of the first line (right corner)
         - [ ] Show Ram useage like 5G/16G. Maybe even color code on percentage?
+            - [ ] Font color did got messed up when proting to .toml
         - [x] Remove the version display of node directly command line
         - [ ] Display git information in a new line instead of growing command line. Looks ridicious with giant branch names
         - [ ] Adjust Git check symbol and red dot. They look outdated. Maybe a Font Problem
@@ -28,6 +29,7 @@ starting from scratch and remembering all my steps.
 - [ ] keep track of additional packages. May be usefull for an installer script
     - neovim: Telescop
         - ripgrep [fzf in neovim]
+            - also use fzf native since /** is neat
         - fd/fd-find needs ln -s $(which fdfind) /usr/bin/fd
     - python3-venv [mason in neovim]. Are you sure? Alot of optional in checkhealth
     - tmux, nvim, zsh, pipewire, alacritty [DUH!]
@@ -35,8 +37,8 @@ starting from scratch and remembering all my steps.
             - Tmux https://github.com/caiogondim/maglev
             - Zsh https://github.com/caiogondim/bullet-train.zsh
             - Alacritty + Neovim Tokiyo-Storm
-    - Nerd Hack Font (fonts-hack-ttf) [ glyphs ]
-        - No longer defined in Alacritty. Current setup is fonts.conf
+    - JetBrainsMonoNL Nerd Font [ glyphs ]
+        - get it from Nerd Font Repo -> releases
     - calf-plugins [audio processin lv2]
         - needs pipewire with lv2 support before it can be used
     - bat [cat with syntaxhighlighting, alias added]
