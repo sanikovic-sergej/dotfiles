@@ -15,16 +15,11 @@ thickness = 0.2
 unfocused_hollow = true
 
 [[colors.indexed_colors]]
-color = "#FAB387"
-index = 16
-
-[[colors.indexed_colors]]
 color = "#F5E0DC"
 index = 17
 
 # Colors (Tokyo Night Storm variant)
 # Source https//github.com/zatchheems/tokyo-night-alacritty-theme
-
 # Default colors
 [colors.primary]
 background = '#24283b'
