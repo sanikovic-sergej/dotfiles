@@ -1,4 +1,4 @@
-require("keymaps")
-require("manager")
+require("keybindings")
+require("packet-manager")
 require("theme")
-require("set")
+require("vim-options")
