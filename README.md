@@ -7,8 +7,8 @@ starting from scratch and remembering all my steps.
 - [ ] switch to zsh as a main from bash
     - The Theme will be based on https://github.com/caiogondim/bullet-train.zsh
         - [X] Adjust Time to be at the end of the first line (right corner)
-        - [ ] Show Ram useage like 5G/16G. Maybe even color code on percentage?
-            - [ ] Font color did got messed up when proting to .toml
+        - [ ] Show Ram usage like 5G/16G. Maybe even color code on percentage?
+            - [ ] Font color did get messed up when porting to .toml
         - [x] Remove the version display of node directly command line
         - [ ] Display git information in a new line instead of growing command line. Looks ridicious with giant branch names
         - [ ] Adjust Git check symbol and red dot. They look outdated. Maybe a Font Problem
@@ -20,15 +20,15 @@ starting from scratch and remembering all my steps.
         - got a tip to use an audiointerface device. How about wireless connections like Bluetooth?
 - [ ] Change Cursor depending on VI Mode. A "Beam" on insert and "Block" in normal mode
 - Next Neovim Plugins
-    - [ ] Which-key
+    - [X] Which-key
     - [ ] Lazy-Git
     - [ ] Harpoon
-    - [ ] Neo-Tree
+    - [X] Neo-Tree
 - [ ] Switching to git-submodules for plugins
     - Submodules in tmux
     - Submodules oh-my-zsh
 - [ ] keep track of additional packages. May be usefull for an installer script
-    - neovim: Telescop
+    - Neovim: Telescope
         - ripgrep [fzf in neovim]
             - also use fzf native since /** is neat
         - fd/fd-find needs ln -s $(which fdfind) /usr/bin/fd
@@ -40,7 +40,7 @@ starting from scratch and remembering all my steps.
             - Alacritty + Neovim Tokiyo-Storm
     - JetBrainsMonoNL Nerd Font [ glyphs ]
         - get it from Nerd Font Repo -> releases
-    - calf-plugins [audio processin lv2]
+    - calf-plugins [audio processing lv2]
         - needs pipewire with lv2 support before it can be used
-    - bat [cat with syntaxhighlighting, alias added]
+    - bat [cat with syntax highlighting, alias added]
     - nala [apt frontend, alias added]
