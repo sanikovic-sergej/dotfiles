@@ -26,6 +26,7 @@ end
 
 local telescope = require('telescope.builtin')
 local which_key = require("which-key")
+local neo_tree = require("neo-tree")
 which_key.register({
     ["<leader>f"] = {
         name = "File->",
@@ -43,5 +44,11 @@ which_key.register({
         name = "Toggle->",
         l = {function() toggle_line_numbers() end, "Line Numbers" },
         r = {function() toggle_relative_line_numbers() end, "Relative Line Numbers" },
+    },
+    ["<leader>d"] = {
+        name = "Display->",
+        t = {function() vim.api.nvim_exec('Neotree toggle', true) end , "File Tree" },
+        g = {function() vim.api.nvim_exec('Neotree float git_status', true) end, "Git status" },
+        b = {function() vim.api.nvim_exec('Neotree buffers', true) end, "Git status" },
     },
 })
