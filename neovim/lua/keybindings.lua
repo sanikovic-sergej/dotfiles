@@ -49,6 +49,6 @@ which_key.register({
         name = "Display->",
         t = {function() vim.api.nvim_exec('Neotree toggle', true) end , "File Tree" },
         g = {function() vim.api.nvim_exec('Neotree float git_status', true) end, "Git status" },
-        b = {function() vim.api.nvim_exec('Neotree buffers', true) end, "Git status" },
+        b = {function() vim.api.nvim_exec('Neotree buffers', true) end, "Open buffers" },
     },
 })
