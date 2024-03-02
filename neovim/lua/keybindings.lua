@@ -1,3 +1,8 @@
+--<C-...>: Ctrl key. For example, <C-n> represents Ctrl + N.
+--<M-...>: Alt or Meta key. On some systems, it's represented as Alt, while on others, it might be the Meta key. For example, <M-n> represents Alt + N or Meta + N.
+--<S-...>: Shift key. For example, <S-n> represents Shift + N.
+--<A-...>: Same as <M-...>. Represents Alt or Meta key.
+
 -- Save file with Ctrl+S
 vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true})
 -- Close file WITHOUT saving
@@ -26,6 +31,7 @@ which_key.register({
         name = "File->",
         f = { telescope.find_files, "Find Files" },
         g = { telescope.live_grep, "Live Grep"},
+        s = { telescope.grep_string, "Grep String"},
         b = { telescope.buffers, "Buffers"},
         h = { telescope.help_tags, "Help Tags"},
     },
