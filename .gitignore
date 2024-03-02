@@ -1,6 +1,10 @@
 # Noevim exlisions
 /neovim/lazy-lock.json
 
-# Tmux Plugins till submodules
+# Neovim spell checker dictionary
+/neovim/spell/*
 
+# Tmux Plugins till submodules
 /tmux/plugins/*
+
+
