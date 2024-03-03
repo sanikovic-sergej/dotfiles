@@ -69,6 +69,25 @@ return {
         -- see :help lsp-zero-keybindings
         -- to learn the available actions
         lsp_zero.default_keymaps({buffer = bufnr})
+        -- Enable autoformatting on save
+        lsp_zero.buffer_autoformat()
+        -- List references
+        vim.keymap.set('n','gr','<cmd>Telescope lsp_references<CR>', {buffer = bufnr})
+        -- LSP keybindings suggested by ChatGPT
+        vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {buffer = bufnr})
+        vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {buffer = bufnr})
+        vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<CR>', {buffer = bufnr})
+        vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {buffer = bufnr})
+        vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {buffer = bufnr})
+        vim.keymap.set('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {buffer = bufnr})
+        vim.keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', {buffer = bufnr})
+        vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', {buffer = bufnr})
+        vim.keymap.set('n', '<leader>cd', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', {buffer = bufnr})
+        vim.keymap.set('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', {buffer = bufnr})
+        vim.keymap.set('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', {buffer = bufnr})
+        -- Assuming you have LSP setup
+        vim.keymap.set('n', '<leader>fmt', '<cmd>lua vim.lsp.buf.format()<CR>', {buffer = bufnr})
+
       end)
 
       require('mason-lspconfig').setup({
