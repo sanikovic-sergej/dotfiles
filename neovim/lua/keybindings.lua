@@ -4,9 +4,9 @@
 --<A-...>: Same as <M-...>. Represents Alt or Meta key.
 
 -- Save file with Ctrl+S
-vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true})
+vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true })
 -- Close file WITHOUT saving
-vim.api.nvim_set_keymap('n', '<C-q>', ':q!<CR>', { noremap = true})
+vim.api.nvim_set_keymap('n', '<C-q>', ':q!<CR>', { noremap = true })
 
 local function toggle_line_numbers()
     if vim.fn.expand("%:t") ~= "" then
@@ -31,24 +31,25 @@ which_key.register({
     ["<leader>f"] = {
         name = "File->",
         f = { telescope.find_files, "Find Files" },
-        g = { telescope.live_grep, "Live Grep"},
-        s = { telescope.grep_string, "Grep String"},
-        b = { telescope.buffers, "Buffers"},
-        h = { telescope.help_tags, "Help Tags"},
+        g = { telescope.live_grep, "Live Grep" },
+        s = { telescope.grep_string, "Grep String" },
+        b = { telescope.buffers, "Buffers" },
+        h = { telescope.help_tags, "Help Tags" },
+        p = { telescope.git_files, "Git Files" },
     },
     ["<leader>p"] = {
         name = "Project->",
-        e = { vim.cmd.Ex, "Exlorer"},
+        e = { vim.cmd.Ex, "Exlorer" },
     },
     ["<leader>t"] = {
         name = "Toggle->",
-        l = {function() toggle_line_numbers() end, "Line Numbers" },
-        r = {function() toggle_relative_line_numbers() end, "Relative Line Numbers" },
+        l = { function() toggle_line_numbers() end, "Line Numbers" },
+        r = { function() toggle_relative_line_numbers() end, "Relative Line Numbers" },
     },
     ["<leader>d"] = {
         name = "Display->",
-        t = {function() vim.api.nvim_exec('Neotree toggle', true) end , "File Tree" },
-        g = {function() vim.api.nvim_exec('Neotree float git_status', true) end, "Git status" },
-        b = {function() vim.api.nvim_exec('Neotree buffers', true) end, "Open buffers" },
+        t = { function() vim.api.nvim_exec('Neotree toggle', true) end, "File Tree" },
+        g = { function() vim.api.nvim_exec('Neotree float git_status', true) end, "Git status" },
+        b = { function() vim.api.nvim_exec('Neotree buffers', true) end, "Open buffers" },
     },
 })
