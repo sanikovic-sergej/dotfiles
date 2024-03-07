@@ -20,8 +20,9 @@ starting from scratch and remembering all my steps.
 - [ ] Switching to git-submodules for plugins
     - Submodules in tmux
     - Submodules oh-my-zsh
-- [ ] keep track of additional packages. May be usefull for an installer script
+- [ ] keep track of additional packages. May be useful for an installer script
     - Neovim: Telescope
+        - install it locally, so that auto_install works correctly
         - ripgrep [fzf in neovim]
             - also use fzf native since /** is neat
         - fd/fd-find needs ln -s $(which fdfind) /usr/bin/fd
@@ -32,7 +33,7 @@ starting from scratch and remembering all my steps.
             - Zsh https://github.com/caiogondim/bullet-train.zsh
             - Alacritty + Neovim Tokiyo-Storm
     - JetBrainsMonoNL Nerd Font [ glyphs ]
-        - get it from Nerd Font Repo -> releases
+        - get it from Nerd Font Repo ⇒ releases
     - calf-plugins [audio processing lv2]
         - needs pipewire with lv2 support before it can be used
     - bat [cat with syntax highlighting, alias added]
