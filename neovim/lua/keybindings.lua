@@ -47,6 +47,7 @@ which_key.register({
         name = "Toggle->",
         l = { function() toggle_line_numbers() end, "Line Numbers" },
         r = { function() toggle_relative_line_numbers() end, "Relative Line Numbers" },
+        -- TODO: Toggle for auto-format on save
     },
     ["<leader>d"] = {
         name = "Display->",
