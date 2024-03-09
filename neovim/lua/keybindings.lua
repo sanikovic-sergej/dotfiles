@@ -55,4 +55,8 @@ which_key.register({
         g = { function() vim.api.nvim_exec('Neotree float git_status', true) end, "Git status" },
         b = { function() vim.api.nvim_exec('Neotree buffers', true) end, "Open buffers" },
     },
+    ["<leader>q"] = {
+        name = "Close->",
+        t = { function() vim.api.nvim_exec('bd', true) end, "Close current Buffer" },
+    },
 })
