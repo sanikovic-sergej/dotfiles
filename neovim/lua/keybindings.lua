@@ -31,6 +31,8 @@ which_key.register({
     ["<leader>f"] = {
         name = "File->",
         f = { telescope.find_files, "Find Files" },
+        -- another way to use telescope
+        -- f = { "<cmd>Telescope find_files<CR>", desc = "Find Files" },
         g = { telescope.live_grep, "Live Grep" },
         s = { telescope.grep_string, "Grep String" },
         b = { telescope.buffers, "Buffers" },

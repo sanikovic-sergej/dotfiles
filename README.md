@@ -11,7 +11,7 @@ starting from scratch and remembering all my steps.
     - could make a good template with calf-plugins but pipewire has no lv2 support
         - build it with lv2 support?
         - Got a tip to use an audio interface device. How about wireless connections like Bluetooth?
-- [ ] Make own theme based on bullet-train
+- [ ] Make own zsh-theme based on bullet-train?
 - [ ] Change Cursor depending on VI Mode. A "Beam" on insert and "Block" in normal mode
 - Next Neovim Plugins
     - [ ] Lazy-Git
