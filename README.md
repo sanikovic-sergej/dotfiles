@@ -17,6 +17,8 @@ starting from scratch and remembering all my steps.
     - [x] Lazy-Git
         - [x] Toggle Git line blame
     - [ ] Harpoon
+        - Now somehow branch harpoon2
+        - config too compilicated and Chat-GPT only gives wrong config
 - [ ] Switching to git-submodules for plugins
     - Submodules in tmux
     - Submodules oh-my-zsh
