@@ -19,9 +19,6 @@ starting from scratch and remembering all my steps.
     - [ ] Harpoon
         - Now somehow branch harpoon2
         - config too compilicated and Chat-GPT only gives wrong config
-- [ ] Switching to git-submodules for plugins
-    - Submodules in tmux
-    - Submodules oh-my-zsh
 - [ ] keep track of additional packages. May be useful for an installer script
     - Neovim: Telescope
         - install it locally, so that auto_install works correctly

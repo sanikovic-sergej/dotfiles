@@ -262,6 +262,8 @@ alias vim="nvim"
 
 alias cat="batcat"
 
+alias lg="lazygit"
+
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
