@@ -14,9 +14,8 @@ starting from scratch and remembering all my steps.
 - [ ] Make own zsh-theme based on bullet-train?
 - [ ] Change Cursor depending on VI Mode. A "Beam" on insert and "Block" in normal mode
 - Next Neovim Plugins
-    - [ ] Lazy-Git
+    - [x] Lazy-Git
     - [ ] Harpoon
-    - [ ] Look for inspiration from LazyVim
 - [ ] Switching to git-submodules for plugins
     - Submodules in tmux
     - Submodules oh-my-zsh
@@ -32,6 +31,7 @@ starting from scratch and remembering all my steps.
             - Tmux https://github.com/caiogondim/maglev
             - Zsh https://github.com/caiogondim/bullet-train.zsh
             - Alacritty + Neovim Tokiyo-Storm
+    - LazyGit from Github https://github.com/jesseduffield/lazygit
     - JetBrainsMonoNL Nerd Font [ glyphs ]
         - get it from Nerd Font Repo ⇒ releases
     - calf-plugins [audio processing lv2]
