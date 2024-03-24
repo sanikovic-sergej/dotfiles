@@ -27,6 +27,7 @@ end
 local telescope = require('telescope.builtin')
 local which_key = require("which-key")
 local neo_tree = require("neo-tree")
+
 which_key.register({
     ["<leader>f"] = {
         name = "File->",
@@ -47,6 +48,7 @@ which_key.register({
         name = "Toggle->",
         l = { function() toggle_line_numbers() end, "Line Numbers" },
         r = { function() toggle_relative_line_numbers() end, "Relative Line Numbers" },
+        gb = { function() vim.api.nvim_exec('Gitsigns toggle_current_line_blame', true) end, "Toggle Git Blame Line" },
         -- TODO: Toggle for auto-format on save
     },
     ["<leader>d"] = {

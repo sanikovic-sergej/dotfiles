@@ -15,6 +15,7 @@ starting from scratch and remembering all my steps.
 - [ ] Change Cursor depending on VI Mode. A "Beam" on insert and "Block" in normal mode
 - Next Neovim Plugins
     - [x] Lazy-Git
+        - [ ] Toggle Git line blame
     - [ ] Harpoon
 - [ ] Switching to git-submodules for plugins
     - Submodules in tmux
