@@ -1,0 +1,35 @@
+[init]
+    defaultBranch = main
+
+[user]
+    name = Sanikovic, Sergej
+
+[core]
+    eol = lf
+    editor = nvim
+    whitespace = tabwidth = 4
+
+[blame]
+    coloring = repeatedLines
+    markUnblamables = true
+    markIgnoredLines = true
+
+[checkout]
+    defaultRemote = origin
+
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+
+[column]
+    ui = auto
+
+[fetch]
+    prune = true
+
+[pull]
+    rebase = true
+
+[rebase]
+    autoStash = true
