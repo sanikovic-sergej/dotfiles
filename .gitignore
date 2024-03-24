@@ -3,3 +3,9 @@
 
 # Neovim spell checker dictionary
 /neovim/spell/*
+
+# Tmux plugins
+/tmux/plugins/*
+
+# Oh-My-Zsh local changes
+/zsh/oh-my-zsh/*
