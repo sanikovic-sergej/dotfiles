@@ -14,11 +14,15 @@ starting from scratch and remembering all my steps.
 - [ ] Make own zsh-theme based on bullet-train?
 - [ ] Change Cursor depending on VI Mode. A "Beam" on insert and "Block" in normal mode
 - Next Neovim Plugins
-    - [x] Lazy-Git
-        - [x] Toggle Git line blame
     - [ ] Harpoon
         - Now somehow branch harpoon2
         - config too compilicated and Chat-GPT only gives wrong config
+    - [ ] Add snippets
+        - [ ] TODO:
+        - [ ] doxygen
+    - [ ] Check more mini plugins
+        - [ ] mini.comment
+        - [ ] mini.bracketed (was annoying in VS Code, lets give it another chance)
 - [ ] keep track of additional packages. May be useful for an installer script
     - Neovim: Telescope
         - install it locally, so that auto_install works correctly
