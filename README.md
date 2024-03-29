@@ -19,14 +19,14 @@ starting from scratch and remembering all my steps.
         - config too compilicated and Chat-GPT only gives wrong config
 - [ ] Add snippets
         - [ ] TODO:
-        - [ ] doxygen
-    - [ ] Check more mini plugins
-        - [ ] mini.comment
-        - [ ] mini.bracketed (was annoying in VS Code, lets give it another chance)
+        - [ ] doxygen comments
+        - [ ] mirror defined method to source/header
+- [ ] Give feedback when recording
 - [x] Check more mini plugins
         - [x] mini.comment
         - [x] mini.pairs (was annoying in VS Code, lets give it another chance)
 - [ ] Check and pick specific plugins when loading in vscode/vscodium
+- [ ] Neo-Tree sync with current buffer
 - [ ] keep track of additional packages. May be useful for an installer script
     - some packages and lsp depend on rust/cargo
     - Neovim: Telescope
