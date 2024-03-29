@@ -49,7 +49,9 @@ which_key.register({
         name = "Toggle->",
         l = { function() toggle_line_numbers() end, "Line Numbers" },
         r = { function() toggle_relative_line_numbers() end, "Relative Line Numbers" },
-        gb = { function() vim.api.nvim_exec('Gitsigns toggle_current_line_blame', true) end, "Toggle Git Blame Line" },
+        gb = { function() vim.api.nvim_exec('Gitsigns toggle_current_line_blame', true) end, "Git Blame Line" },
+        d = { function() vim.api.nvim_exec('TroubleToggle', true) end, "Diagnostics" },
+        sp = { function() vim.api.nvim_exec('setlocal spell!', true) end, "Spellcheck" },
         -- TODO: Toggle for auto-format on save
     },
     ["<leader>d"] = {
