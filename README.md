@@ -17,7 +17,7 @@ starting from scratch and remembering all my steps.
     - [ ] Harpoon
         - Now somehow branch harpoon2
         - config too compilicated and Chat-GPT only gives wrong config
-    - [ ] Add snippets
+- [ ] Add snippets
         - [ ] TODO:
         - [ ] doxygen
     - [ ] Check more mini plugins

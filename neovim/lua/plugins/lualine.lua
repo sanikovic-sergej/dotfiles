@@ -1,6 +1,6 @@
--- Fancier statusline
 return {
     "nvim-lualine/lualine.nvim",
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
         require("lualine").setup({
             options = {
@@ -12,6 +12,9 @@ return {
             extensions = {
                 "neo-tree",
                 "lazy",
+                "fzf",
+                "mason",
+                "trouble"
             },
         })
     end,
