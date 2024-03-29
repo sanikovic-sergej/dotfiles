@@ -23,6 +23,9 @@ starting from scratch and remembering all my steps.
     - [ ] Check more mini plugins
         - [ ] mini.comment
         - [ ] mini.bracketed (was annoying in VS Code, lets give it another chance)
+- [x] Check more mini plugins
+        - [x] mini.comment
+        - [x] mini.pairs (was annoying in VS Code, lets give it another chance)
 - [ ] Check and pick specific plugins when loading in vscode/vscodium
 - [ ] keep track of additional packages. May be useful for an installer script
     - some packages and lsp depend on rust/cargo
