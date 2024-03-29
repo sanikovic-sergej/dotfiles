@@ -53,6 +53,7 @@ which_key.register({
         d = { function() vim.api.nvim_exec('TroubleToggle', true) end, "Diagnostics" },
         sp = { function() vim.api.nvim_exec('setlocal spell!', true) end, "Spellcheck" },
         -- TODO: Toggle for auto-format on save
+        af = { function() vim.api.nvim_exec('', true) end, "Autoformat on save" },
     },
     ["<leader>d"] = {
         name = "Display->",
@@ -75,6 +76,6 @@ which_key.register({
     },
     ["["] = {
         name = "Previous ->",
-        t = { function() require("todo-comments").jump_next() end, "Previous todo comment" },
+        t = { function() require("todo-comments").jump_prev() end, "Previous todo comment" },
     },
 })
