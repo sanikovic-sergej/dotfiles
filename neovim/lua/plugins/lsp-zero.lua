@@ -89,6 +89,8 @@ return {
                 vim.keymap.set('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', { buffer = bufnr })
                 -- Assuming you have LSP setup
                 vim.keymap.set('n', '<leader>fmt', '<cmd>lua vim.lsp.buf.format()<CR>', { buffer = bufnr })
+                -- Switch between .cpp and .h files in a C++ project
+                vim.keymap.set('n', '<leader>sw', '<cmd>lua vim.lsp.buf.code_action()<CR>', { buffer = true })
             end)
 
             require('mason-lspconfig').setup({

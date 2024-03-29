@@ -27,6 +27,7 @@ end
 local telescope = require('telescope.builtin')
 local which_key = require("which-key")
 local neo_tree = require("neo-tree")
+local noice = require("noice")
 
 which_key.register({
     ["<leader>f"] = {
@@ -60,6 +61,11 @@ which_key.register({
     ["<leader>q"] = {
         name = "Close->",
         t = { function() vim.api.nvim_exec('bd', true) end, "Close current Buffer" },
+    },
+    ["<leader>n"] = {
+        name = "Notifications->",
+        l = { "<cmd>Telescope notify<CR>", "List Notifications" },
+        d = { "<cmd>NoiceDismiss<CR>", "Dismiss Notifications" },
     },
 })
 -- TODO: integrate the suggested todo-comments keybinding into which-key
