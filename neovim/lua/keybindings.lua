@@ -54,6 +54,7 @@ which_key.register({
         sp = { function() vim.api.nvim_exec('setlocal spell!', true) end, "Spellcheck" },
         -- TODO: Toggle for auto-format on save
         af = { function() vim.api.nvim_exec('', true) end, "Autoformat on save" },
+        h = { function() vim.cmd('set hlsearch!') end, "Highlight search" },
     },
     ["<leader>d"] = {
         name = "Display->",
