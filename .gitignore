@@ -3,6 +3,8 @@
 
 # Neovim spell checker dictionary
 /neovim/spell/*
+# Neovim undo directory
+/neovim/undodir/*
 
 # Tmux plugins
 /tmux/plugins/*
