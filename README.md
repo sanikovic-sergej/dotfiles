@@ -21,7 +21,7 @@ starting from scratch and remembering all my steps.
         - [ ] TODO:
         - [ ] doxygen comments
         - [ ] mirror defined method to source/header
-- [ ] Give feedback when recording
+- [ ] Give feedback when recording with Q Macro in lualine
 - [x] Check more mini plugins
         - [x] mini.comment
         - [x] mini.pairs (was annoying in VS Code, lets give it another chance)
@@ -33,7 +33,7 @@ starting from scratch and remembering all my steps.
         - install it locally, so that auto_install works correctly
         - ripgrep [fzf in neovim]
             - also use fzf native since /** is neat
-        - fd/fd-find needs ln -s $(which fdfind) /usr/bin/fd
+        - fd/fd-find needs ln -s $(which fdfind) /usr/bin/fd [on Ubuntu]
     - python3-venv [mason in neovim]. Are you sure? Alot of optional in checkhealth
     - tmux, nvim, zsh, pipewire, alacritty [DUH!]
         - Theme
