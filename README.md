@@ -10,7 +10,7 @@ starting from scratch and remembering all my steps.
 - [x] Somehow create a Pipewire audio filter chain, that makes mics useable
     - could make a good template with calf-plugins but pipewire has no lv2 support
         - build it with lv2 support?
-        - Got a tip to use an audio interface device. How about wireless connections like Bluetooth?
+        - Got a tip to use an audio interface device. They only work on wired AUX devices >.>
 - [ ] Make own zsh-theme based on bullet-train?
 - [ ] Change Cursor depending on VI Mode. A "Beam" on insert and "Block" in normal mode
 - Next Neovim Plugins
@@ -22,11 +22,13 @@ starting from scratch and remembering all my steps.
         - [ ] doxygen comments
         - [ ] mirror defined method to source/header
 - [ ] Give feedback when recording with Q Macro in lualine
+    - a PR is pending for refresh on start/stop recording
 - [x] Check more mini plugins
         - [x] mini.comment
         - [x] mini.pairs (was annoying in VS Code, lets give it another chance)
 - [ ] Check and pick specific plugins when loading in vscode/vscodium
-- [ ] Neo-Tree sync with current buffer
+- [ ] Specify behavior when starting with admin rights (sudo nvim)
+- [x] Neo-Tree sync with current buffer
 - [ ] keep track of additional packages. May be useful for an installer script
     - some packages and lsp depend on rust/cargo
     - Neovim: Telescope
@@ -34,7 +36,7 @@ starting from scratch and remembering all my steps.
         - ripgrep [fzf in neovim]
             - also use fzf native since /** is neat
         - fd/fd-find needs ln -s $(which fdfind) /usr/bin/fd [on Ubuntu]
-    - python3-venv [mason in neovim]. Are you sure? Alot of optional in checkhealth
+    - python3-venv [mason in neovim]. Are you sure? A lot of optional in checkhealth
     - tmux, nvim, zsh, pipewire, alacritty [DUH!]
         - Theme
             - Tmux https://github.com/caiogondim/maglev
