@@ -78,7 +78,7 @@ return {
                     ["tb"] = { "<cmd>lua require('gitsigns').toggle_current_line_blame()<CR>", "Toggle Current Line Blame" },
                     ["hd"] = { "<cmd>lua require('gitsigns').diffthis()<CR>", "Diff This" },
                     ["hD"] = { "<cmd>lua require('gitsigns').diffthis('~')<CR>", "Diff This with Tilde" },
-                    ["td"] = { "<cmd>lua require('gitsigns').toggle_deleted()<CR>", "Toggle Deleted" }
+                    ["tgd"] = { "<cmd>lua require('gitsigns').toggle_deleted()<CR>", "Toggle Deleted" }
                 }, { mode = 'n', prefix = '<leader>' })
 
                 -- Register which-key for select_hunk text object
