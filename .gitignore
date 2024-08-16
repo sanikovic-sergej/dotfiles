@@ -9,5 +9,7 @@
 # Tmux plugins
 /tmux/plugins/*
 
-# Oh-My-Zsh local changes
-/zsh/oh-my-zsh/*
+# ZSH History
+/zsh/zsh_history
+# Antidote [ZSH Plugin Manager]
+/zsh/plugins.zsh

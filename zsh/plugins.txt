@@ -1,0 +1,24 @@
+# Allows for defered execution (opens useage of kind:defer)
+romkatv/zsh-defer
+
+#zsh-vi-mode
+jeffreytse/zsh-vi-mode
+
+# Jump quickly to directories that you have visited "frecently."
+agkozak/zsh-z
+
+# OMZ plugins
+# Tries to fix copy to clipboard interactions
+ohmyzsh/ohmyzsh path:lib/clipboard.zsh
+# just enter for ls or git status in a repo
+ohmyzsh/ohmyzsh path:plugins/magic-enter
+
+# completion plugins
+zsh-users/zsh-completions
+mattmc3/zephyr path:plugins/completion
+
+# deferred plugins
+olets/zsh-abbr kind:defer
+zsh-users/zsh-autosuggestions kind:defer
+zdharma-continuum/fast-syntax-highlighting kind:defer
+zsh-users/zsh-history-substring-search kind:defer
