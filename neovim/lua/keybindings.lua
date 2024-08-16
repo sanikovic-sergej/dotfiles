@@ -42,7 +42,7 @@ which_key.register({
         p = { telescope.git_files, "Git Files" },
         af = { function() telescope.find_files({ hidden = true }) end, "Find all Files" },
         -- TODO: Search all Files including hidden and gitignore
-        ag = { function() telescope.live_grep({ arguments = { '-I', '--hidden' } }) end, "Live Grep everything" },
+        ag = { function() telescope.live_grep({ additional_args = { "-uuu" } }) end, "Live Grep everything" },
     },
     ["<leader>p"] = {
         name = "Project->",
@@ -72,6 +72,10 @@ which_key.register({
         name = "Notifications->",
         l = { "<cmd>Telescope notify<CR>", "List Notifications" },
         d = { "<cmd>NoiceDismiss<CR>", "Dismiss Notifications" },
+    },
+    ["<leader>s"] = {
+        name = "Sudo->",
+        e = { '<cmd>term sudoedit %<cr>', 'Edit with Sudo' },
     },
     ["]"] = {
         name = "Next ->",

@@ -28,7 +28,7 @@ starting from scratch and remembering all my steps.
 - [ ] Fix overlapping Keymaps that are reported by Wich-Key
 - [ ] Fix when searching and going to result the cursor starting at the top instead of the result line
 - [ ] Check and pick specific plugins when loading in vscode/vscodium
-- [ ] Specify behavior when starting with admin rights (sudo nvim)
+- [x] Specify behavior when starting with admin rights (sudo nvim)
 - [x] Neo-Tree sync with current buffer
     - [ ] remove it as default explorer when starting nvim
 - [ ] keep track of additional packages. May be useful for an installer script

@@ -13,6 +13,7 @@ export PATH=$HOME/.local/bin:/opt/rocm/bin:$PATH
 
 # Activate Vi-Mode. zsh-vi-mode does not override
 #set -o vi
+EDITOR="nvim"
 
 export DOTFILES_ZSH="$HOME/.dotfiles/zsh"
 # Clone Antidote[Plugin Manager] and load plugins
