@@ -40,6 +40,9 @@ which_key.register({
         b = { telescope.buffers, "Buffers" },
         h = { telescope.help_tags, "Help Tags" },
         p = { telescope.git_files, "Git Files" },
+        af = { function() telescope.find_files({ hidden = true }) end, "Find all Files" },
+        -- TODO: Search all Files including hidden and gitignore
+        ag = { function() telescope.live_grep({ arguments = { '-I', '--hidden' } }) end, "Live Grep everything" },
     },
     ["<leader>p"] = {
         name = "Project->",
@@ -49,22 +52,21 @@ which_key.register({
         name = "Toggle->",
         l = { function() toggle_line_numbers() end, "Line Numbers" },
         r = { function() toggle_relative_line_numbers() end, "Relative Line Numbers" },
-        gb = { function() vim.api.nvim_exec('Gitsigns toggle_current_line_blame', true) end, "Git Blame Line" },
-        d = { function() vim.api.nvim_exec('TroubleToggle', true) end, "Diagnostics" },
-        sp = { function() vim.api.nvim_exec('setlocal spell!', true) end, "Spellcheck" },
+        gb = { function() vim.cmd('Gitsigns toggle_current_line_blame') end, "Git Blame Line" },
+        sp = { function() vim.cmd('setlocal spell!') end, "Spellcheck" },
         -- TODO: Toggle for auto-format on save
-        af = { function() vim.api.nvim_exec('', true) end, "Autoformat on save" },
+        af = { function() vim.cmd('') end, "Autoformat on save" },
         h = { function() vim.cmd('set hlsearch!') end, "Highlight search" },
     },
     ["<leader>d"] = {
         name = "Display->",
-        t = { function() vim.api.nvim_exec('Neotree toggle', true) end, "File Tree" },
-        g = { function() vim.api.nvim_exec('Neotree float git_status', true) end, "Git status" },
-        b = { function() vim.api.nvim_exec('Neotree buffers', true) end, "Open buffers" },
+        t = { function() vim.cmd('Neotree toggle') end, "File Tree" },
+        g = { function() vim.cmd('Neotree float git_status') end, "Git status" },
+        b = { function() vim.cmd('Neotree buffers') end, "Open buffers" },
     },
     ["<leader>q"] = {
         name = "Close->",
-        t = { function() vim.api.nvim_exec('bd', true) end, "Close current Buffer" },
+        t = { function() vim.cmd('bd') end, "Close current Buffer" },
     },
     ["<leader>n"] = {
         name = "Notifications->",

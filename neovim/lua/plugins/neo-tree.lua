@@ -10,9 +10,9 @@ return {
         require("neo-tree").setup({
             window = {
                 mappings = {
-                    ['t'] = function() vim.api.nvim_exec('Neotree focus filesystem left', true) end,
-                    ['b'] = function() vim.api.nvim_exec('Neotree focus buffers left', true) end,
-                    ['g'] = function() vim.api.nvim_exec('Neotree focus git_status left', true) end,
+                    ['t'] = function() vim.cmd('Neotree focus filesystem left') end,
+                    ['b'] = function() vim.cmd('Neotree focus buffers left') end,
+                    ['g'] = function() vim.cmd('Neotree focus git_status left') end,
                 },
             },
             keys = {
