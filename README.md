@@ -11,8 +11,9 @@ starting from scratch and remembering all my steps.
     - could make a good template with calf-plugins but pipewire has no lv2 support
         - build it with lv2 support?
         - Got a tip to use an audio interface device. They only work on wired AUX devices >.>
-- [ ] Make own zsh-theme based on bullet-train?
-- [ ] Change Cursor depending on VI Mode. A "Beam" on insert and "Block" in normal mode
+- [ ] Transition to Starship - Cross Shell
+    - [ ] Make own zsh-theme based on bullet-train?
+    - [ ] Change Cursor depending on VI Mode. A "Beam" on insert and "Block" in normal mode
 - Next Neovim Plugins
     - [ ] Harpoon
         - Now somehow branch harpoon2
@@ -23,14 +24,14 @@ starting from scratch and remembering all my steps.
         - [ ] mirror defined method to source/header
 - [ ] Give feedback when recording with Q Macro in lualine
     - a PR is pending for refresh on start/stop recording
-- [x] Check more mini plugins
-        - [x] mini.comment
-        - [x] mini.pairs (was annoying in VS Code, lets give it another chance)
 - [ ] Check and pick specific plugins when loading in vscode/vscodium
 - [ ] Specify behavior when starting with admin rights (sudo nvim)
 - [x] Neo-Tree sync with current buffer
+    - [ ] remove it as default explorer when starting nvim
 - [ ] keep track of additional packages. May be useful for an installer script
     - some packages and lsp depend on rust/cargo
+        - cargo install starship --locked
+            - Cmake is needed for build
     - Neovim: Telescope
         - install it locally, so that auto_install works correctly
         - ripgrep [fzf in neovim]
