@@ -11,9 +11,9 @@ starting from scratch and remembering all my steps.
     - could make a good template with calf-plugins but pipewire has no lv2 support
         - build it with lv2 support?
         - Got a tip to use an audio interface device. They only work on wired AUX devices >.>
-- [ ] Transition to Starship - Cross Shell
+- [x] Transition to Starship - Cross Shell
     - [ ] Make own zsh-theme based on bullet-train?
-    - [ ] Change Cursor depending on VI Mode. A "Beam" on insert and "Block" in normal mode
+    - [x] Change Cursor depending on VI Mode.
 - Next Neovim Plugins
     - [ ] Harpoon
         - Now somehow branch harpoon2
@@ -23,6 +23,7 @@ starting from scratch and remembering all my steps.
         - [ ] doxygen comments
         - [ ] mirror defined method to source/header
 - [ ] Give feedback when recording with Q Macro in lualine
+    - currently broken, maybe Key is overwritten by a defautl keybinding?
     - a PR is pending for refresh on start/stop recording
 - [ ] Check and pick specific plugins when loading in vscode/vscodium
 - [ ] Specify behavior when starting with admin rights (sudo nvim)
@@ -41,7 +42,6 @@ starting from scratch and remembering all my steps.
     - tmux, nvim, zsh, pipewire, alacritty [DUH!]
         - Theme
             - Tmux https://github.com/caiogondim/maglev
-            - Zsh https://github.com/caiogondim/bullet-train.zsh
             - Alacritty + Neovim Tokiyo-Storm
     - LazyGit from Github https://github.com/jesseduffield/lazygit
     - JetBrainsMonoNL Nerd Font [ glyphs ]
@@ -49,4 +49,3 @@ starting from scratch and remembering all my steps.
     - calf-plugins [audio processing lv2]
         - needs pipewire with lv2 support before it can be used
     - bat [cat with syntax highlighting, alias added]
-    - nala [apt frontend, alias added]

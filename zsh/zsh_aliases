@@ -158,9 +158,9 @@ alias src="source ~/.zshrc"
 alias src-tmux="tmux source-file ~/.config/tmux/tmux.conf"
 
 alias config-nvim="nvim ~/.config/nvim/"
-alias config-zsh="nvim ~/.zshrc"
-alias config-zsh-plugins="nvim $DOTFILES_ZSH/plugins.txt"
-alias config-zsh-aliases="nvim $DOTFILES_ZSH/aliases.txt"
+alias config-zsh="nvim ${DOTFILES_ZSH}/zshrc"
+alias config-zsh-plugins="nvim ${DOTFILES_ZSH}/plugins.txt"
+alias config-zsh-aliases="nvim ${DOTFILES_ZSH}/zsh_aliases"
 alias config-tmux="nvim ~/.config/tmux/tmux.conf"
 alias config-alacritty="nvim ~/.config/alacritty/alacritty.toml"
 alias config-starship="nvim ~/.config/starship/starship.toml"
@@ -168,6 +168,7 @@ alias config-starship="nvim ~/.config/starship/starship.toml"
 alias dotfiles="cd ~/.dotfiles"
 
 alias vim="nvim"
+alias nv="nvim"
 
 alias cat="bat"
 
