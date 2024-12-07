@@ -6,6 +6,8 @@ jeffreytse/zsh-vi-mode
 
 # Jump quickly to directories that you have visited "frecently."
 agkozak/zsh-z
+# DNF Aliases
+gmifflen/zsh-fedora-plugin
 
 # OMZ plugins
 # Tries to fix copy to clipboard interactions
