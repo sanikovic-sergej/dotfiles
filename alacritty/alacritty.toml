@@ -106,7 +106,9 @@ action = "ToggleFullscreen"
 key = "F11"
 mods = "None"
 
-[shell]
+[terminal]
+
+[terminal.shell]
 program = "/usr/bin/tmux"
 
 [window.padding]
