@@ -29,56 +29,45 @@ local which_key = require("which-key")
 local neo_tree = require("neo-tree")
 local noice = require("noice")
 
-which_key.register({
-    ["<leader>f"] = {
-        name = "File->",
-        f = { telescope.find_files, "Find Files" },
-        -- another way to use telescope
-        -- f = { "<cmd>Telescope find_files<CR>", desc = "Find Files" },
-        g = { telescope.live_grep, "Live Grep" },
-        s = { telescope.grep_string, "Grep String" },
-        b = { telescope.buffers, "Buffers" },
-        h = { telescope.help_tags, "Help Tags" },
-        p = { telescope.git_files, "Git Files" },
-        af = { function() telescope.find_files({ hidden = true }) end, "Find all Files" },
-        -- TODO: Search all Files including hidden and gitignore
-        ag = { function() telescope.live_grep({ additional_args = { "-uuu" } }) end, "Live Grep everything" },
-    },
-    ["<leader>p"] = {
-        name = "Project->",
-        e = { vim.cmd.Ex, "Exlorer" },
-    },
-    ["<leader>t"] = {
-        name = "Toggle->",
-        l = { function() toggle_line_numbers() end, "Line Numbers" },
-        r = { function() toggle_relative_line_numbers() end, "Relative Line Numbers" },
-        gb = { function() vim.cmd('Gitsigns toggle_current_line_blame') end, "Git Blame Line" },
-        sp = { function() vim.cmd('setlocal spell!') end, "Spellcheck" },
-        -- TODO: Toggle for auto-format on save
-        af = { function() vim.cmd('') end, "Autoformat on save" },
-        h = { function() vim.cmd('set hlsearch!') end, "Highlight search" },
-    },
-    ["<leader>d"] = {
-        name = "Display->",
-        t = { function() vim.cmd('Neotree toggle') end, "File Tree" },
-        g = { function() vim.cmd('Neotree float git_status') end, "Git status" },
-        b = { function() vim.cmd('Neotree buffers') end, "Open buffers" },
-    },
-    ["<leader>n"] = {
-        name = "Notifications->",
-        l = { "<cmd>Telescope notify<CR>", "List Notifications" },
-        d = { "<cmd>NoiceDismiss<CR>", "Dismiss Notifications" },
-    },
-    ["<leader>s"] = {
-        name = "Sudo->",
-        e = { '<cmd>term sudoedit %<cr>', 'Edit with Sudo' },
-    },
-    ["]"] = {
-        name = "Next ->",
-        t = { function() require("todo-comments").jump_next() end, "Next todo comment" },
-    },
-    ["["] = {
-        name = "Previous ->",
-        t = { function() require("todo-comments").jump_prev() end, "Previous todo comment" },
-    },
+which_key.add({
+    { "<leader>f",   group = "File->" },
+    { "<leader>faf", function() telescope.find_files({ hidden = true }) end,               desc = "Find all Files" },
+    -- TODO: Search all Files including hidden and gitignore
+    { "<leader>fag", function() telescope.live_grep({ additional_args = { "-uuu" } }) end, desc = "Live Grep everything" },
+    { "<leader>fb",  telescope.buffers,                                                    desc = "Buffers" },
+    { "<leader>ff",  telescope.find_files,                                                 desc = "Find Files" },
+    { "<leader>fg",  telescope.live_grep,                                                  desc = "Live Grep" },
+    { "<leader>fh",  telescope.help_tags,                                                  desc = "Help Tags" },
+    { "<leader>fp",  telescope.git_files,                                                  desc = "Git Files" },
+    { "<leader>fs",  telescope.grep_string,                                                desc = "Grep String" },
+
+    { "<leader>p",   group = "Project->" },
+    { "<leader>pe",  vim.cmd.Ex,                                                           desc = "Exlorer" },
+
+    { "<leader>t",   group = "Toggle->" },
+    -- TODO: Toggle for auto-format on save
+    { "<leader>taf", function() vim.cmd('') end,                                           desc = "Autoformat on save" },
+    { "<leader>tgb", function() vim.cmd('Gitsigns toggle_current_line_blame') end,         desc = "Git Blame Line" },
+    { "<leader>th",  function() vim.cmd('set hlsearch!') end,                              desc = "Highlight search" },
+    { "<leader>tl",  function() toggle_line_numbers() end,                                 desc = "Line Numbers" },
+    { "<leader>tr",  function() toggle_relative_line_numbers() end,                        desc = "Relative Line Numbers" },
+    { "<leader>tsp", function() vim.cmd('setlocal spell!') end,                            desc = "Spellcheck" },
+
+    { "<leader>d",   group = "Display->" },
+    { "<leader>db",  function() vim.cmd('Neotree buffers') end,                            desc = "Open buffers" },
+    { "<leader>dg",  function() vim.cmd('Neotree float git_status') end,                   desc = "Git status" },
+    { "<leader>dt",  function() vim.cmd('Neotree toggle') end,                             desc = "File Tree" },
+
+    { "<leader>n",   group = "Notifications->" },
+    { "<leader>nd",  "<cmd>NoiceDismiss<CR>",                                              desc = "Dismiss Notifications" },
+    { "<leader>nl",  "<cmd>Telescope notify<CR>",                                          desc = "List Notifications" },
+
+    { "<leader>s",   group = "Sudo->" },
+    { "<leader>se",  "<cmd>term sudoedit %<cr>",                                           desc = "Edit with Sudo" },
+
+    { "[",           group = "Previous ->" },
+    { "[t",          function() require("todo-comments").jump_prev() end,                  desc = "Previous todo comment" },
+
+    { "]",           group = "Next ->" },
+    { "]t",          function() require("todo-comments").jump_next() end,                  desc = "Next todo comment" },
 })
