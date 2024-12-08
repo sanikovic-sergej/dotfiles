@@ -64,10 +64,6 @@ which_key.register({
         g = { function() vim.cmd('Neotree float git_status') end, "Git status" },
         b = { function() vim.cmd('Neotree buffers') end, "Open buffers" },
     },
-    ["<leader>q"] = {
-        name = "Close->",
-        t = { function() vim.cmd('bd') end, "Close current Buffer" },
-    },
     ["<leader>n"] = {
         name = "Notifications->",
         l = { "<cmd>Telescope notify<CR>", "List Notifications" },
