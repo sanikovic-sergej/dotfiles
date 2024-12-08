@@ -8,46 +8,28 @@ return {
     },
     config = function()
         require("neo-tree").setup({
+            sources = { "filesystem", "buffers", "git_status" },
+            open_files_do_not_replace_types = { "terminal", "Trouble", "trouble", "qf", "Outline" },
             window = {
                 mappings = {
                     ['t'] = function() vim.cmd('Neotree focus filesystem left') end,
                     ['b'] = function() vim.cmd('Neotree focus buffers left') end,
                     ['g'] = function() vim.cmd('Neotree focus git_status left') end,
-                },
-            },
-            keys = {
-                {
-                    "<A-t>",
-                    function()
-                        require("neo-tree.command").execute({
-                            toggle = true,
-                            source = "filesystem",
-                            position = "left",
-                        })
-                    end,
-                    desc = "Filesystem (root dir)",
-                },
-                {
-                    "<A-g>",
-                    function()
-                        require("neo-tree.command").execute({
-                            toggle = true,
-                            source = "git_status",
-                            position = "left",
-                        })
-                    end,
-                    desc = "Git Status (root dir)",
-                },
-                {
-                    "<A-b>",
-                    function()
-                        require("neo-tree.command").execute({
-                            toggle = true,
-                            source = "buffers",
-                            position = "left",
-                        })
-                    end,
-                    desc = "Buffers (root dir)",
+                    ["Y"] = {
+                        function(state)
+                            local node = state.tree:get_node()
+                            local path = node:get_id()
+                            vim.fn.setreg("+", path, "c")
+                        end,
+                        desc = "Copy Path to Clipboard",
+                    },
+                    ["O"] = {
+                        function(state)
+                            require("lazy.util").open(state.tree:get_node().path, { system = true })
+                        end,
+                        desc = "Open with System Application",
+                    },
+                    ["P"] = { "toggle_preview", config = { use_float = false } },
                 },
             },
             filesystem = {
