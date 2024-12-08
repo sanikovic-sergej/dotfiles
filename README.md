@@ -25,7 +25,7 @@ starting from scratch and remembering all my steps.
 - [ ] Give feedback when recording with Q Macro in lualine
     - currently broken, maybe Key is overwritten by a defautl keybinding?
     - a PR is pending for refresh on start/stop recording
-- [ ] Fix overlapping Keymaps that are reported by Wich-Key
+- [x] Fix overlapping Keymaps that are reported by Wich-Key
 - [ ] Fix when searching and going to result the cursor starting at the top instead of the result line
 - [ ] Check and pick specific plugins when loading in vscode/vscodium
 - [x] Specify behavior when starting with admin rights (sudo nvim)
