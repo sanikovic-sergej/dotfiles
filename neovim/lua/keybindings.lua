@@ -52,9 +52,9 @@ which_key.add({
     { "<leader>tsp", function() vim.cmd('setlocal spell!') end,                            desc = "Spellcheck" },
 
     { "<leader>d",   group = "Display->" },
-    { "<leader>db",  function() vim.cmd('Neotree buffers') end,                            desc = "Open buffers" },
-    { "<leader>dg",  function() vim.cmd('Neotree float git_status') end,                   desc = "Git status" },
-    { "<leader>dt",  function() vim.cmd('Neotree toggle') end,                             desc = "File Tree" },
+    { "<leader>db",  function() vim.cmd('Neotree buffers left toggle') end,                desc = "Open buffers" },
+    { "<leader>dg",  function() vim.cmd('Neotree git_status left toggle') end,             desc = "Git status" },
+    { "<leader>dt",  function() vim.cmd('Neotree filesystem left toggle') end,             desc = "File Tree" },
 
     { "<leader>n",   group = "Notifications->" },
     { "<leader>nd",  "<cmd>NoiceDismiss<CR>",                                              desc = "Dismiss Notifications" },
