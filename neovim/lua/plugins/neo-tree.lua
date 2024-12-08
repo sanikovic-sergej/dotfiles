@@ -7,7 +7,8 @@ return {
         "MunifTanjim/nui.nvim",
     },
     config = function()
-        require("neo-tree").setup({
+        local configs = require("neo-tree")
+        configs.setup({
             sources = { "filesystem", "buffers", "git_status" },
             open_files_do_not_replace_types = { "terminal", "Trouble", "trouble", "qf", "Outline" },
             window = {
@@ -31,6 +32,9 @@ return {
                     },
                     ["P"] = { "toggle_preview", config = { use_float = false } },
                 },
+                position = "left",
+                auto_open = false,
+                close_if_last_window = true,
             },
             filesystem = {
                 follow_current_file = {
@@ -38,6 +42,7 @@ return {
                     --               -- the current file is changed while the filesystem tree is open.
                     leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
                 },
+                hijack_netrw_behavior = "open_current",
             },
             buffers = {
                 follow_current_file = {
@@ -45,6 +50,8 @@ return {
                     --               -- the current file is changed while the buffer tree is open.
                     leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
                 },
+                group_empty_dirs = true,
+                show_unloaded = true,
             },
         })
     end,

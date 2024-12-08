@@ -26,8 +26,6 @@ end
 
 local telescope = require('telescope.builtin')
 local which_key = require("which-key")
-local neo_tree = require("neo-tree")
-local noice = require("noice")
 
 which_key.add({
     { "<leader>f",   group = "File->" },
@@ -42,7 +40,7 @@ which_key.add({
     { "<leader>fs",  telescope.grep_string,                                                desc = "Grep String" },
 
     { "<leader>p",   group = "Project->" },
-    { "<leader>pe",  vim.cmd.Ex,                                                           desc = "Exlorer" },
+    { "<leader>pe",  function() vim.cmd('Neotree float') end,                              desc = "Exlorer" },
 
     { "<leader>t",   group = "Toggle->" },
     -- TODO: Toggle for auto-format on save
