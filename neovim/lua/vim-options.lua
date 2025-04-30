@@ -5,6 +5,9 @@ vim.opt.guicursor = ""
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+-- Highlight current line number
+vim.opt.cursorline = true
+
 -- Setting Indent and Tab behavior
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4

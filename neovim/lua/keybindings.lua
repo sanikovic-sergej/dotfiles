@@ -50,6 +50,7 @@ which_key.add({
     { "<leader>tl",  function() toggle_line_numbers() end,                                 desc = "Line Numbers" },
     { "<leader>tr",  function() toggle_relative_line_numbers() end,                        desc = "Relative Line Numbers" },
     { "<leader>tw",  function() vim.cmd('set wrap!') end,                                  desc = "Line Wrap" },
+    { "<leader>tc",  function() vim.cmd('set cursorline!') end,                            desc = "Cursorline" },
     { "<leader>tsp", function() vim.cmd('setlocal spell!') end,                            desc = "Spellcheck" },
 
     { "<leader>d",   group = "Display->" },
