@@ -49,6 +49,7 @@ which_key.add({
     { "<leader>th",  function() vim.cmd('set hlsearch!') end,                              desc = "Highlight search" },
     { "<leader>tl",  function() toggle_line_numbers() end,                                 desc = "Line Numbers" },
     { "<leader>tr",  function() toggle_relative_line_numbers() end,                        desc = "Relative Line Numbers" },
+    { "<leader>tw",  function() vim.cmd('set wrap!') end,                                  desc = "Line Wrap" },
     { "<leader>tsp", function() vim.cmd('setlocal spell!') end,                            desc = "Spellcheck" },
 
     { "<leader>d",   group = "Display->" },
