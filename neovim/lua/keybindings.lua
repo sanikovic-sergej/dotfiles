@@ -41,6 +41,8 @@ which_key.add({
 
     { "<leader>p",   group = "Project->" },
     { "<leader>pe",  function() vim.cmd('Neotree float') end,                              desc = "Exlorer" },
+    { "<leader>pm",  function() vim.cmd('Lazy') end,                                       desc = "Paket Manager" },
+    { "<leader>mm",  function() vim.cmd('Mason') end,                                      desc = "Mason Manager" },
 
     { "<leader>t",   group = "Toggle->" },
     -- TODO: Toggle for auto-format on save
