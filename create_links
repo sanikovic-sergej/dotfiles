@@ -1,9 +1,93 @@
 #!/bin/bash
 
-ln -s ~/.dotfiles/alacritty/ ~/.config/alacritty
-ln -s ~/.dotfiles/neovim/ ~/.config/nvim
-ln -s ~/.dotfiles/starship/ ~/.config/starship
-ln -s ~/.dotfiles/tmux/ ~/.config/tmux
-ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
-ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
+#Using Bash Strict Mode
+set -euo pipefail
+IFS=$'\n\t'
 
+# --- Validate Environment Variables ---
+if ! [ -v DOTFILES_HOME ]; then
+    DOTFILES_HOME="$HOME/.dotfiles" # Good enough as a home
+fi
+
+if ! [ -v CONFIG_DIR_PATH ]; then
+    CONFIG_DIR_PATH="$HOME/.config/" # May Use XDG_CONFIG_DIRS but doesnt quite fit yet
+fi
+
+if ! [ -v LIST_OF_FOLDERS_TO_SYMLINK ]; then
+    LIST_OF_FOLDERS_TO_SYMLINK=(
+        alacritty
+        nvim
+        starship
+        tmux
+        git
+        )
+fi
+
+DELETE_SYMLINKS() {
+    for FOLDER in "${LIST_OF_FOLDERS_TO_SYMLINK[@]}"; do
+
+        local SYMLINK_PATH="${CONFIG_DIR_PATH}${FOLDER}"
+        
+        # Verify symlink exists before deletion
+        if [ -L "$SYMLINK_PATH" ]; then
+            rm -f "$SYMLINK_PATH"
+            echo "Removed symlink: $SYMLINK_PATH"
+        else
+            echo "No symlink found at: $SYMLINK_PATH"
+        fi
+    done
+    echo "Finished deleting symlinks"
+}
+
+# Function to create new symlinks
+CREATE_SYMLINKS() {
+    for FOLDER in "${LIST_OF_FOLDERS_TO_SYMLINK[@]}"; do
+
+        local SOURCE_PATH="${DOTFILES_HOME}/${FOLDER}"
+        local SYMLINK_PATH="${CONFIG_DIR_PATH}${FOLDER}"
+        
+        # Verify source exists before creating
+        if [ -d "$SOURCE_PATH" ]; then
+            # Check if symlink already exists
+            if [ -L "$SYMLINK_PATH" ]; then
+                echo "Symlink already exists at: $SYMLINK_PATH"
+            else
+                ln -s "$SOURCE_PATH" "$SYMLINK_PATH"
+                echo "Created symlink: $SOURCE_PATH -> $SYMLINK_PATH"
+            fi
+        else
+            echo "Source directory not found: $SOURCE_PATH"
+        fi
+    done
+    echo "Finished creating symlinks"
+}
+
+PRINT_HELP(){
+    local HELP_MESSAGE="Creates symlinks from the [${DOTFILES_HOME}] folder to [${CONFIG_DIR_PATH}] for these folders:"
+    local FOLDERS_LIST=""
+
+    for FOLDER in "${LIST_OF_FOLDERS_TO_SYMLINK[@]}"; do
+        if [ -z "$FOLDERS_LIST" ]; then
+            FOLDERS_LIST="$FOLDER"  # No comma before the first folder
+        else
+            FOLDERS_LIST="$FOLDERS_LIST, $FOLDER"  # Add commas between folders
+        fi
+    done
+
+    echo "$HELP_MESSAGE $FOLDERS_LIST."
+}
+
+main(){
+
+    while getopts ":dh" option; do
+        case $option in
+            d) DELETE_SYMLINKS; exit 0;;
+            h) PRINT_HELP; exit 0;;
+            *) echo "Unknow option: -$option" >&2; exit 1;;
+        esac
+    done
+
+    echo "Starting creating symlinks..."
+    CREATE_SYMLINKS
+}
+main "$@"

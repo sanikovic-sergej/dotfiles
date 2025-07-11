@@ -1,10 +1,10 @@
 # Noevim exclusion
-/neovim/lazy-lock.json
+/nvim/lazy-lock.json
 
 # Neovim spell checker dictionary
-/neovim/spell/*
+/nvim/spell/*
 # Neovim undo directory
-/neovim/undodir/*
+/nvim/undodir/*
 
 # Tmux plugins
 /tmux/plugins/*
