@@ -8,7 +8,7 @@ abbr --add l. 'ls -d .* --color=tty' # short listing, only hidden files - .*
 abbr --add la 'ls -Al' # show hidden files
 abbr --add lh 'ls -lSrh' # sort by size human readable
 
-abbr --add src "source ~/.zshrc"
+abbr --add src "source ~/.config/fish/config.fish"
 abbr --add src-tmux "tmux source-file ~/.config/tmux/tmux.conf"
 abbr --add today 'date +"%A, %B %-d, %Y"'
 abbr --add weeknum 'date +%V'
