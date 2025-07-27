@@ -1,17 +1,19 @@
 abbr --add vim nvim
 abbr --add vi nvim
-abbr --add nv nvim
+abbr --add nv "nvim ./"
+abbr --add c cd
 
 # Directory Listing aliases
-abbr --add dir 'ls -hFx'
-abbr --add l. 'ls -d .* --color=tty' # short listing, only hidden files - .*
-abbr --add la 'ls -Al' # show hidden files
-abbr --add lh 'ls -lSrh' # sort by size human readable
+abbr --add dir "ls -hFx"
+abbr --add l. "ls -d .* --color=tty" # short listing, only hidden files - .*
+abbr --add la "ls -Al" # show hidden files
+abbr --add lh "ls -lSrh" # sort by size human readable
+abbr --add ll "eza --long --grid"
 
 abbr --add src "source ~/.config/fish/config.fish"
 abbr --add src-tmux "tmux source-file ~/.config/tmux/tmux.conf"
-abbr --add today 'date +"%A, %B %-d, %Y"'
-abbr --add weeknum 'date +%V'
+abbr --add today "date +"%A, %B %-d, %Y""
+abbr --add weeknum "date +%V"
 abbr --add qfind "find . -name " # qfind:    Quickly search for file
 
 abbr --add config-nvim "nvim ~/.config/nvim/"
