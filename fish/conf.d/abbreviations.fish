@@ -8,7 +8,7 @@ abbr --add cat bat
 abbr --add l "eza --long --icons --classify --hyperlink --group-directories-first"
 abbr --add la "eza --long --icons --classify --hyperlink --all"
 abbr --add lt "eza --long --icons --classify --hyperlink --recurse --tree --level=2"
-abbr --add lg "eza --long --icons --grid --hyperlink --group-directories-first"
+abbr --add gl "eza --long --icons --grid --hyperlink --group-directories-first"
 
 #abbr --add src "source ~/.config/fish/config.fish"
 abbr --add src "source ~/.config/fish/**/*.fish"
