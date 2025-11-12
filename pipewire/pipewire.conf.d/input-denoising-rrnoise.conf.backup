@@ -1,0 +1,109 @@
+context.modules = [
+    {
+        name = libpipewire-module-filter-chain
+        args = {
+            node.description =  "Noise Canceling source with Filters"
+            media.name =  "Noise Canceling source with Filters"
+            filter.graph = {
+                nodes = [
+                    {
+                        type = ladspa
+                        name = rnnoise
+                        plugin = /home/linusani/.dotfiles/pipewire/librnnoise_ladspa.so
+                        label = noise_suppressor_mono
+                        control = {
+                            "VAD Threshold (%)" = 50.0
+                            "VAD Grace Period (ms)" = 200
+                            "Retroactive VAD Grace (ms)" = 0
+                        }
+                    },
+                    {
+                        type = lv2
+                        name = gate
+                        plugin = /usr/lib/lv2/calf.lv2/Gate.ttl
+                        parameters = {
+                            attack = 5.0
+                            detection = RMS
+                            input-gain = 0.0
+                            knee = 9.0
+                            makeup = 0.0
+                            output-gain = 0.0
+                            range = -12.0
+                            ratio = 2.0
+                            release = 100.0
+                            stereo-link = Average
+                            threshold = -18.0
+                        }
+                    },
+                    {
+                        type = lv2
+                        name = compressor
+                        plugin = /usr/lib/lv2/calf.lv2/Compressor.ttl
+                        parameters = {
+                            attack = 20.0
+                            input-gain = 0.0
+                            knee = -6.0
+                            makeup = 0.0
+                            ratio = 4.0
+                            release = 100.0
+                            threshold = -12.0
+                        }
+                    },
+                    {
+                        type = lv2
+                        name = filter
+                        plugin = /usr/lib/lv2/calf.lv2/Filter.ttl
+                        parameters = {
+                            frequency = 80.0
+                            input-gain = 0.0
+                            mode = "12dB/oct Highpass"
+                            output-gain = 0.0
+                            resonance = -3.0
+                        }
+                    },
+                    {
+                        type = lv2
+                        name = deesser
+                        plugin = /usr/lib/lv2/calf.lv2/Deesser.ttl
+                        parameters = {
+                            detection = RMS
+                            input-gain = 0.0
+                            makeup = 0.0
+                            threshold = -18.0
+                        }
+                    },
+                    {
+                        type = lv2
+                        name = limiter
+                        plugin = /usr/lib/lv2/calf.lv2/Limiter.ttl
+                        parameters = {
+                            attack = 5.0
+                            input-gain = 0.0
+                            output-gain = 0.0
+                            release = 5.0
+                            threshold = -1.0
+                        }
+                    },
+                ]
+                links = [
+                    {source = "rnnoise", dest = "gate"},
+                    {source = "gate", dest = "compressor"},
+                    {source = "compressor", dest = "filter"},
+                    {source = "filter", dest = "deesser"},
+                    {source = "deesser", dest = "limiter"},
+                ]
+            }
+            capture.props = {
+                node.name =  "capture.rnnoise_filtered_source"
+                node.passive = true
+                audio.rate = 48000
+                node.target = "alsa_input.target"
+            }
+            playback.props = {
+                node.name =  "rnnoise_filtered_source"
+                media.class = Audio/Source
+                audio.rate = 48000
+            }
+        }
+    }
+]
