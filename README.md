@@ -4,9 +4,9 @@ With this repository I shall save my setup and improve on it instead of
 starting from scratch and remembering all my steps.
 
 # Goals
- - [x] Same Thing for 
-        - [X] Fix "? 0%" on no battery devices
-        - [ ] Do a pull request to tmux cpu to fix it
+- [x] Same Thing for 
+    - [x] Fix "? 0%" on no battery devices
+    - [ ] Do a pull request to tmux cpu to fix it
 - [x] Somehow create a Pipewire audio filter chain, that makes mics useable
     - could make a good template with calf-plugins but pipewire has no lv2 support
         - build it with lv2 support?
@@ -18,10 +18,11 @@ starting from scratch and remembering all my steps.
     - [ ] Harpoon
         - Now somehow branch harpoon2
         - config too compilicated and Chat-GPT only gives wrong config
+    - [ ] Use native LSP
 - [ ] Add snippets
-        - [ ] TODO:
-        - [ ] doxygen comments
-        - [ ] mirror defined method to source/header
+    - [ ] TODO:
+    - [ ] doxygen comments
+    - [ ] mirror defined method to source/header
 - [ ] Give feedback when recording with Q Macro in lualine
     - currently broken, maybe Key is overwritten by a defautl keybinding?
     - a PR is pending for refresh on start/stop recording
@@ -49,6 +50,7 @@ starting from scratch and remembering all my steps.
     - LazyGit from Github https://github.com/jesseduffield/lazygit
     - JetBrainsMonoNL Nerd Font [ glyphs ]
         - get it from Nerd Font Repo ⇒ releases
+        - IBM Plex Mono -> BlexMono Nerd Font wins
     - calf-plugins [audio processing lv2]
         - needs pipewire with lv2 support before it can be used
     - bat [cat with syntax highlighting, alias added]
